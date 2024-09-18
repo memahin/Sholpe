@@ -9,17 +9,18 @@
         android:id="@+id/top_bg"
         android:layout_width="match_parent"
         android:layout_height="582dp"
+        android:layout_above="@+id/signupButton"
         android:layout_alignParentTop="true"
         android:layout_marginTop="-98dp"
-        android:rotationX="-253"
+        android:layout_marginBottom="63dp"
         app:srcCompat="@drawable/bg_black" />
 
     <ImageView
         android:id="@+id/top_icon"
-        android:layout_width="300dp"
-        android:layout_height="210dp"
+        android:layout_width="246dp"
+        android:layout_height="147dp"
         android:layout_alignParentEnd="true"
-        android:layout_marginEnd="50dp"
+        android:layout_marginEnd="89dp"
         app:srcCompat="@drawable/ic_logo" />
 
     <TextView

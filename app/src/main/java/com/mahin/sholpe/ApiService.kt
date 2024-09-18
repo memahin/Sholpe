@@ -2,6 +2,7 @@ package com.mahin.sholpe
 
 import retrofit2.Call
 import retrofit2.http.Body
+import retrofit2.http.GET
 import retrofit2.http.POST
 
 interface ApiService {
@@ -10,4 +11,7 @@ interface ApiService {
 
     @POST("user/register")
     fun registerUser(@Body requestBody: data.SignupRequest): Call<data.SignupResponse>
+
+    @GET("user/product")
+    suspend fun getProducts(): data.ProductResponse
 }
