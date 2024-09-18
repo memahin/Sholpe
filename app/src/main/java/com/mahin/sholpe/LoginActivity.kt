@@ -59,7 +59,7 @@ class LoginActivity : AppCompatActivity() {
                     val loginResponse = response.body()!!
                     Toast.makeText(this@LoginActivity, "Login Successful", Toast.LENGTH_SHORT).show()
                     // Navigate to Product Page
-                    val intent = Intent(this@LoginActivity, ProductActivity::class.java)
+                    val intent = Intent(this@LoginActivity, MainActivity::class.java)
                     startActivity(intent)
                 } else {
                     Toast.makeText(this@LoginActivity, "Login Failed", Toast.LENGTH_SHORT).show()

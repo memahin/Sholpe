@@ -19,7 +19,6 @@ class MainActivity : AppCompatActivity() {
         recyclerView = findViewById(R.id.recyclerView)
         recyclerView.layoutManager = LinearLayoutManager(this)
 
-        // Fetch data and set up RecyclerView
         fetchProducts()
     }
 
@@ -28,10 +27,9 @@ class MainActivity : AppCompatActivity() {
             try {
                 val response = RetrofitInstance.api.getProducts()
                 val products = response.data
-                productAdapter = ProductAdapter(products)
+                productAdapter = ProductAdapter(products,)
                 recyclerView.adapter = productAdapter
             } catch (e: Exception) {
-                // Handle error
             }
         }
     }
