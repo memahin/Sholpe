@@ -2,6 +2,7 @@ package com.mahin.sholpe.data.repository
 
 import com.mahin.sholpe.data.model.login.LoginRequest
 import com.mahin.sholpe.data.model.login.LoginResponse
+import com.mahin.sholpe.data.model.product.Product
 import com.mahin.sholpe.data.model.signup.SignupRequest
 import com.mahin.sholpe.data.model.signup.SignupResponse
 import com.mahin.sholpe.data.remote.ApiService
@@ -58,4 +59,22 @@ class UserRepository(private val apiService: ApiService) {
             }
         }
     }
+
+    suspend fun fetchProducts(): Resource<Product> {
+        return withContext(Dispatchers.IO) {
+            try {
+                val response = apiService.getProducts()
+                if (response.isSuccessful) {
+                    response.body()?.let {
+                        Resource.Success(it)
+                    } ?: Resource.Error("Empty response")
+                } else {
+                    Resource.Error("Error: ${response.message()}")
+                }
+            } catch (e: Exception) {
+                Resource.Error(e.localizedMessage ?: "An unexpected error occurred")
+            }
+        }
+    }
 }
+
