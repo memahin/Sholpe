@@ -19,15 +19,18 @@
         android:layout_marginBottom="63dp"
         app:srcCompat="@drawable/bg_black" />
 
-    <ImageView
-        android:id="@+id/top_icon"
-        android:layout_width="246dp"
-        android:layout_height="147dp"
-        android:layout_alignParentEnd="true"
-        android:layout_marginEnd="89dp"
-        app:srcCompat="@drawable/ic_logo" />
+        <com.airbnb.lottie.LottieAnimationView
+            android:id="@+id/top_icon"
+            android:layout_width="308dp"
+            android:layout_height="184dp"
+            android:layout_alignParentEnd="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginEnd="53dp"
+            app:lottie_autoPlay="true"
+            app:lottie_loop="true"
+            app:lottie_rawRes="@raw/shopping" />
 
-    <TextView
+        <TextView
         android:id="@+id/textView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -125,7 +128,7 @@
         android:textSize="18sp"
         android:textStyle="bold" />
 
-    <ProgressBar
+        <ProgressBar
         android:id="@+id/progressBar"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"

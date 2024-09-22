@@ -20,13 +20,14 @@
           android:layout_marginBottom="23dp"
           app:srcCompat="@drawable/bg_black" />
 
-      <ImageView
+      <com.airbnb.lottie.LottieAnimationView
           android:id="@+id/top_icon"
           android:layout_width="252dp"
           android:layout_height="149dp"
-          android:layout_alignParentEnd="true"
-          android:layout_marginEnd="77dp"
-          app:srcCompat="@drawable/ic_logo" />
+          android:layout_centerHorizontal="true"
+          app:lottie_rawRes="@raw/shopping"
+          app:lottie_autoPlay="true"
+          app:lottie_loop="true"/>
 
       <TextView
           android:id="@+id/text_top"
@@ -162,6 +163,17 @@
           android:textColor="#FFFFFF"
           android:textSize="18sp"
           android:textStyle="bold" />
+
+      <TextView
+          android:id="@+id/loginLink"
+          android:layout_width="wrap_content"
+          android:layout_height="50dp"
+          android:layout_below="@id/signupButton"
+          android:layout_centerHorizontal="true"
+          android:layout_marginTop="24dp"
+          android:text="Already have an account? Login"
+          android:textSize="16sp"
+          android:clickable="true" />
 
       <ProgressBar
           android:id="@+id/progressBar"

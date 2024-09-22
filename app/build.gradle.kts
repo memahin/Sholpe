@@ -53,5 +53,7 @@ dependencies {
     implementation (libs.kotlinx.coroutines.android)
     implementation (libs.androidx.recyclerview)
     implementation (libs.coil)
+    implementation (libs.lottie)
+    implementation(libs.androidx.lifecycle.viewmodel.ktx)
 
 }
