@@ -29,9 +29,6 @@
             android:exported="false"
             android:windowSoftInputMode="adjustResize|stateVisible"/>
 
-        <activity
-            android:name=".ui.main.MainActivity"
-            android:exported="false" />
 
     </application>
 
