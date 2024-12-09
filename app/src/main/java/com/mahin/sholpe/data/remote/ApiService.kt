@@ -12,10 +12,10 @@ import retrofit2.http.GET
 
 interface ApiService {
 
-    @POST("login")
+    @POST("user/login")
     suspend fun loginUser(@Body loginRequest: LoginRequest): Response<LoginResponse>
 
-    @POST("signup")
+    @POST("user/register")
     suspend fun registerUser(@Body signupRequest: SignupRequest): Response<SignupResponse>
 
     @GET("user/product")

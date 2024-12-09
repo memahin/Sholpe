@@ -1,6 +1,9 @@
 plugins {
     alias(libs.plugins.android.application)
     alias(libs.plugins.kotlin.android)
+
+    //id("com.android.application")
+    id("com.google.gms.google-services")
 }
 
 android {
@@ -15,6 +18,10 @@ android {
         versionName = "1.0"
 
         testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
+    }
+
+    buildFeatures {
+        viewBinding = true
     }
 
     buildTypes {
@@ -55,5 +62,11 @@ dependencies {
     implementation (libs.coil)
     implementation (libs.lottie)
     implementation(libs.androidx.lifecycle.viewmodel.ktx)
+    implementation(libs.logging.interceptor)
+
+    implementation(libs.firebase.bom)
+    implementation(libs.firebase.analytics)
+
+    implementation (libs.imageslideshow)
 
 }
